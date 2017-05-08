@@ -4,6 +4,7 @@
 
 ; Ignore "BUCK" generated dirs
 <PROJECT_ROOT>/\.buckd/
+<PROJECT_ROOT>/src/*
 
 ; Ignore unexpected extra "@providesModule"
 .*/node_modules/.*/node_modules/fbjs/.*
@@ -20,6 +21,7 @@
 node_modules/react-native/Libraries/react-native/react-native-interface.js
 node_modules/react-native/flow
 flow/
+src/
 
 [options]
 emoji=true

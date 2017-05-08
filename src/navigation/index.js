@@ -1,32 +1,22 @@
-/**
- * @providesModule navigation
- */
+// @flow
 
+import type { Store } from 'redux';
+import type { Provider } from 'react-redux';
 import R from 'ramda';
-import React from 'react';
 import { Navigation } from 'react-native-navigation';
-import { registerSceneHelper, rootScene, scenes } from './scenes';
 
-export function initialiseNavigation(store: Object, Provider: Component, options: Object) {
-  const {
-    initialRoute,
-  } = options;
+// relative
+import type { Scene, Options } from './types';
+import { registerSceneHelper } from './utils';
+import { scenes } from './scenes';
 
+export function initialiseNavigation(store: Store, provider: Provider, options: Options) {
   // route handler
-  const registerScene = R.partial(registerSceneHelper, [store, Provider]);
+  const registerScene = R.partial(registerSceneHelper, [store, provider]);
 
   // register scenes
-  scenes.forEach((scene: Object) => registerScene(scene));
-  registerScene(rootScene);
+  scenes.forEach((scene: Scene): void => registerScene(scene));
 
-  return Navigation.startSingleScreenApp({
-    screen: {
-      screen: rootScene.route,
-      title: rootScene.title,
-      navigatorStyle: {},
-      navigatorButtons: {}
-    },
-    passProps: {},
-    animationType: 'fade'
-  });
+  const initNav = options.tabs ? Navigation.startTabBasedApp : Navigation.startSingleScreenApp;
+  initNav(options);
 }

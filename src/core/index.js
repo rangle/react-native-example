@@ -1,7 +1,6 @@
-/**
- * @providesModule core
- */
+// @flow
 
+import type { Store } from 'redux';
 import R from 'ramda';
 import { compose, createStore, applyMiddleware, combineReducers } from 'redux';
 import createLogger from 'redux-logger';
@@ -12,12 +11,12 @@ import reducers from './reducers';
 import { safeExecuteFunctions } from './utils';
 
 function initialiseStore(
-  storage,
-  whitelist = [],
-  clientMiddlewares = {},
-  clientSagas = [],
-  clientReducers = {},
-) {
+  storage: Array<any>,
+  whitelist: Array<any> = [],
+  clientMiddlewares: Array<any> = [],
+  clientSagas: Array<any> = [],
+  clientReducers: Object = {},
+): Store {
   const logger = createLogger({ collapsed: true });
 
   const sagaMiddleware = createSagaMiddleware();
@@ -31,12 +30,14 @@ function initialiseStore(
     ),
   );
 
-  persistStore(store, {
+  const config: Object = {
     storage,
     whitelist,
-  });
+  };
 
-  sagaMiddleware.run(function* rootSaga() {
+  persistStore(store, config);
+
+  sagaMiddleware.run(function* rootSaga(): any {
     yield safeExecuteFunctions(R.concat(sagas, clientSagas));
   });
 

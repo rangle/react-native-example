@@ -1,38 +1,30 @@
-import React from 'react';
+// @flow
+
 import {
   AppRegistry,
-  View,
-  StatusBar,
   AsyncStorage,
-  Text,
 } from 'react-native';
 import { Provider } from 'react-redux';
 
 import initialiseStore from 'core';
-import { s } from 'styles';
 import { initialiseNavigation } from 'navigation';
+import { Page } from 'components';
 
 export const store = initialiseStore(
-  // storage
-  AsyncStorage,
-  // whitelist
-  [],
+  AsyncStorage,  // storage
+  [],  // whitelist
   [], // middlewares
   [], // sagas
   {}, // client reducers
 );
 
-const App = ({ children }) => (
-  <View style={[s.flx_i, s.flx_col]}>
-    <StatusBar
-      backgroundColor={'black'}
-      barStyle="dark-content"
-    />
-    {children}
-  </View>
-);
-
 initialiseNavigation(store, Provider,
-
+  {
+    screen: {
+      screen: 'app.Home', // unique ID registered with Navigation.registerScreen
+      title: 'Home', // title of the screen as appears in the nav bar (optional)
+    },
+  },
 );
-AppRegistry.registerComponent('ReactNativeStarter', () => App);
+
+AppRegistry.registerComponent('ReactNativeStarter', (): any => Page);

@@ -1,7 +1,13 @@
 {
-  "extends": ["airbnb", "airbnb-flow"],
-  "parser": "flowtype",
+  "extends": [
+    "airbnb"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "flowtype"
+  ],
   "rules": {
+    "react/prop-types": 0,
     "react/jsx-filename-extension": [
       2,
       {
@@ -61,7 +67,59 @@
     "import/no-named-as-default": 0,
     "import/no-named-as-default-member": 0,
     "import/no-unresolved": 0,
-    "import/extensions": 0
+    "import/extensions": 0,
+    "jsx-a11y/anchor-has-content": 0,
+    "flowtype/define-flow-type": 1,
+    "flowtype/space-before-type-colon": [
+      1,
+      "never"
+    ],
+    "flowtype/use-flow-type": 1,
+    "flowtype/valid-syntax": 1,
+    "flowtype/type-id-match": [
+      2,
+      "^([A-Z]+[a-z0-9A-Z]*)$"
+    ],
+    "flowtype/boolean-style": [
+      2,
+      "boolean"
+    ],
+    "flowtype/generic-spacing": [
+      2,
+      "never"
+    ],
+    "flowtype/no-primitive-constructor-types": 2,
+    "flowtype/no-types-missing-file-annotation": 2,
+    "flowtype/no-weak-types": 0,
+    "flowtype/object-type-delimiter": [
+      2,
+      "comma"
+    ],
+    "flowtype/require-parameter-type": 2,
+    "flowtype/require-return-type": [
+      2,
+      "always",
+      {
+        "annotateUndefined": "never"
+      }
+    ],
+    "flowtype/require-valid-file-annotation": 2,
+    "flowtype/semi": [
+      2,
+      "always"
+    ],
+    "flowtype/space-after-type-colon": [
+      2,
+      "always"
+    ],
+    "flowtype/space-before-generic-bracket": [
+      2,
+      "never"
+    ],
+    "flowtype/union-intersection-spacing": [
+      2,
+      "always"
+    ]
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -69,29 +127,8 @@
     }
   },
   "settings": {
-    "import/core-modules": [
-      "@shop",
-      "@loyalty-points",
-      "@navigation",
-      "@app-state",
-      "@beacon",
-      "@components",
-      "@utils",
-      "@landing-page",
-      "@notification",
-      "@dev-menu",
-      "@in-store",
-      "@styles",
-      "@mutation"
-    ],
-    "import/resolver": {
-      "node": {
-        "extensions": [
-          ".js",
-          ".ios.js",
-          ".android.js"
-        ]
-      }
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
     }
   },
   "globals": {

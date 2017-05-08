@@ -1,5 +1,6 @@
-export function safeExecuteFunctions(funcs) {
-  return funcs.map((func) => {
+// @flow
+export function safeExecuteFunctions(funcs: Array<Function>): Array<any> {
+  return funcs.map((func: Function) => {
     try {
       return func();
     } catch (e) {

@@ -1,26 +1,12 @@
-import React from 'react';
-import { Navigation } from 'react-native-navigation';
+// @flow
+
 import { Home } from 'components';
+import type { Scene } from './types';
 
-export const rootScene = {
-  route: 'main.Home',
-  Component: Home,
-  title: 'Home',
-};
-
-export const scenes = [];
-
-export function registerSceneHelper(
-  store: Object,
-  Provider: Component,
-  scene: Object,
-) {
-  const { route, Component, options = {} } = scene;
-
-  Navigation.registerComponent(
-    route,
-    () => Component,
-    store,
-    Provider
-  );
-}
+export const scenes: Array<Scene> = [
+  {
+    route: 'app.Home',
+    component: Home,
+    title: 'Home',
+  },
+];
