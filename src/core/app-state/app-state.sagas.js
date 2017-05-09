@@ -1,3 +1,4 @@
+// @flow
 import { eventChannel } from 'redux-saga';
 import { AppState } from 'react-native';
 import {
@@ -7,16 +8,17 @@ import {
 } from 'redux-saga/effects';
 import { onAppStateChanged } from './app-state.actions';
 
-const removeEventListener = event => callback => AppState.removeEventListener(event, callback);
+const removeEventListener = (event: any): Function => (callback: Function): void =>
+  AppState.removeEventListener(event, callback);
 
-function appStateStatusChannel() {
-  return eventChannel((emitter) => {
+function appStateStatusChannel(): Function {
+  return eventChannel((emitter: Object): any => {
     AppState.addEventListener('change', emitter);
     return removeEventListener('change');
   });
 }
 
-export function* watchForAppStateChange() {
+export function* watchForAppStateChange(): Generator<*, *, *> {
   const stateChannel = yield call(appStateStatusChannel);
   try {
     while (true) {

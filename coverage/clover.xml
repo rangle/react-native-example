@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1494336006680" clover="3.2.0">
+  <project timestamp="1494336006680" name="All files">
+    <metrics statements="22" coveredstatements="18" conditionals="7" coveredconditionals="4" methods="13" coveredmethods="4" elements="42" coveredelements="26" complexity="0" loc="22" ncloc="22" packages="3" files="4" classes="4">
+      <package name="react-native-starter">
+        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <file name="jest-setup.js" path="/Users/mobinni/Documents/projects/react-native-starter/jest-setup.js">
+          <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="react-native-starter.src.core.app-state">
+        <metrics statements="6" coveredstatements="5" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <file name="app-state.reducers.js" path="/Users/mobinni/Documents/projects/react-native-starter/src/core/app-state/app-state.reducers.js">
+          <metrics statements="5" coveredstatements="4" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+        </file>
+        <file name="app-state.types.js" path="/Users/mobinni/Documents/projects/react-native-starter/src/core/app-state/app-state.types.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="react-native-starter.src.core.utils">
+        <metrics statements="9" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <file name="action-helper.js" path="/Users/mobinni/Documents/projects/react-native-starter/src/core/utils/action-helper.js">
+          <metrics statements="9" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
