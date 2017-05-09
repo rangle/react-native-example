@@ -2,7 +2,7 @@ package com.reactnativestarter;
 
 import android.support.annotation.Nullable;
 
-import com.facebook.react.ReactApplication;
+
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.facebook.react.ReactPackage;
@@ -12,11 +12,11 @@ import com.reactnativenavigation.NavigationApplication;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainApplication extends NavigationApplication implements ReactApplication {
+public class MainApplication extends NavigationApplication {
 
     @Override
     public boolean isDebug() {
-        return false;
+        return BuildConfig.DEBUG;
     }
 
     @Nullable
