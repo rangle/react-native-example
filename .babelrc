@@ -1,0 +1,15 @@
+{
+  "presets": ["react-native"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "core": "/core",
+        "navigation": "/navigation",
+        "components": "/components",
+        "styles": "/styles",
+        "assets": "/assets"
+      }
+    }]
+  ]
+}
