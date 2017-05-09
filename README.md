@@ -1,5 +1,5 @@
 # React Native starter
-| **<pre>Build</pre>**  | **<pre>Status</pre>**  |
+| **Build**  | **Status**  |
 |---|---|
 | **Circle CI**  | [![CircleCI](https://circleci.com/gh/rangle/react-native-starter/tree/dev.svg?style=svg)](https://circleci.com/gh/rangle/react-native-starter/tree/dev)  |
 | **iOS**  | [![IOS Build](https://dashboard.buddybuild.com/api/statusImage?appID=5911ec83fa14870001a3c3ce&branch=dev&build=latest)](https://dashboard.buddybuild.com/apps/5911ec83fa14870001a3c3ce/build/latest?branch=dev) |
