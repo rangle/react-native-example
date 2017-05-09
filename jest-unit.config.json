@@ -1,0 +1,15 @@
+{
+  "preset": "react-native",
+  "testPathIgnorePatterns": ["/node_modules/", "e2e", "mutation"],
+  "transformIgnorePatterns": ["node_modules/(?!(jest-)?react-native|react-navigation)"],
+  "setupFiles": ["<rootDir>/jest-setup.js"],
+  "verbose": true,
+  "coverageThreshold": {
+    "global": {
+      "branches": 10,
+      "functions": 10,
+      "lines": 10,
+      "statements": 10
+    }
+  }
+}
