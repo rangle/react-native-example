@@ -8,9 +8,13 @@ import { Navigation } from 'react-native-navigation';
 // relative
 import type { Scene, Options } from './types';
 import { registerSceneHelper } from './utils';
-import { scenes } from './scenes';
 
-export function initialiseNavigation(store: Store, provider: Provider, options: Options) {
+export * from './types';
+export function initialiseNavigation(
+  scenes: Array<Scene>,
+  store: Store, provider: Provider,
+  options: Options,
+) {
   // route handler
   const registerScene = R.partial(registerSceneHelper, [store, provider]);
 

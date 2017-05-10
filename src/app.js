@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import initialiseStore from 'core';
 import { initialiseNavigation } from 'navigation';
 import { Page } from 'components';
+import { scenes } from './scenes';
 
 export const store = initialiseStore(
   AsyncStorage,  // storage
@@ -18,11 +19,17 @@ export const store = initialiseStore(
   {}, // client reducers
 );
 
-initialiseNavigation(store, Provider,
+initialiseNavigation(
+  scenes,
+  store,
+  Provider,
   {
     screen: {
-      screen: 'app.Home', // unique ID registered with Navigation.registerScreen
-      title: 'Home', // title of the screen as appears in the nav bar (optional)
+      screen: 'app.Home',
+      title: 'Home',
+      navigatorStyle: {
+        navBarHidden: true,
+      },
     },
   },
 );

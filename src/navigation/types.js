@@ -1,10 +1,9 @@
 // @flow
-import type { Component } from 'react';
 
 export type Scene = {
-  route: string,
+  screen: string,
   title: string,
-  component: Component<any, any, any>,
+  Component: Function<>,
 };
 
 export type Options = {

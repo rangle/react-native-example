@@ -10,11 +10,9 @@ export function registerSceneHelper(
   provider: Provider,
   scene: Scene,
 ) {
-  const { route, component } = scene;
-
   Navigation.registerComponent(
-    route,
-    (): Component<any, any, any> => component,
+    scene.screen,
+    scene.Component,
     store,
     provider,
   );
