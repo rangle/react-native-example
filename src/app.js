@@ -6,9 +6,10 @@ import {
 } from 'react-native';
 import { Provider } from 'react-redux';
 
-import initialiseStore from 'core';
-import { initialiseNavigation } from 'navigation';
-import { Page } from 'components';
+import initialiseStore from 'src/core';
+import { initialiseNavigation } from 'src/navigation';
+import { Page } from 'src/components';
+import { scenes, tabs } from './scenes';
 
 export const store = initialiseStore(
   AsyncStorage,  // storage
@@ -18,13 +19,11 @@ export const store = initialiseStore(
   {}, // client reducers
 );
 
-initialiseNavigation(store, Provider,
-  {
-    screen: {
-      screen: 'app.Home', // unique ID registered with Navigation.registerScreen
-      title: 'Home', // title of the screen as appears in the nav bar (optional)
-    },
-  },
+initialiseNavigation(
+  scenes,
+  store,
+  Provider,
+  { tabs },
 );
 
 AppRegistry.registerComponent('ReactNativeStarter', (): any => Page);

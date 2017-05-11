@@ -1,5 +1,4 @@
 // @flow
-import type { Component } from 'react';
 import type { Provider } from 'react-redux';
 import type { Store } from 'redux';
 import { Navigation } from 'react-native-navigation';
@@ -10,11 +9,9 @@ export function registerSceneHelper(
   provider: Provider,
   scene: Scene,
 ) {
-  const { route, component } = scene;
-
   Navigation.registerComponent(
-    route,
-    (): Component<any, any, any> => component,
+    scene.screen,
+    scene.Component,
     store,
     provider,
   );
