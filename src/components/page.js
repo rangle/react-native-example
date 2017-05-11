@@ -3,7 +3,7 @@
 import type { Element } from 'react';
 import React, { PureComponent } from 'react';
 import { View, StatusBar } from 'react-native';
-import { s } from 'styles';
+import { s } from 'src/styles';
 
 export class Page extends PureComponent {
   constructor(props: PageProps) {

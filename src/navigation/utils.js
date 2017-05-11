@@ -1,5 +1,4 @@
 // @flow
-import type { Component } from 'react';
 import type { Provider } from 'react-redux';
 import type { Store } from 'redux';
 import { Navigation } from 'react-native-navigation';

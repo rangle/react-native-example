@@ -2,13 +2,13 @@
   "presets": ["react-native"],
   "plugins": [
     ["module-resolver", {
-      "root": ["./src"],
+      "root": ["./"],
       "alias": {
-        "core": "/core",
-        "navigation": "/navigation",
-        "components": "/components",
-        "styles": "/styles",
-        "assets": "/assets"
+        "src/core": "src/core",
+        "src/navigation": "src/navigation",
+        "src/components": "src/components",
+        "src/styles": "src/styles",
+        "src/assets": "src/assets"
       }
     }]
   ]

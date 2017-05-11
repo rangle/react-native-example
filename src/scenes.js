@@ -1,32 +1,32 @@
 // @flow
 
-import { Home } from 'components';
-import type { Scene } from 'navigation';
+import { Home, Search } from 'src/components';
+import type { Scene } from 'src/navigation';
 
 export const scenes: Array<Scene> = [
   {
-    screen: 'app.Home',
+    screen: 'tabs.Home',
     Component: (): Element => Home,
     title: 'Home',
-    navigatorStyle: {
-      navBarHidden: true,
-    },
+  },
+  {
+    screen: 'tabs.Search',
+    Component: (): Element => Search,
+    title: 'Search',
   },
 ];
 
 export const tabs = [
   {
-    label: 'One',
     screen: 'tabs.Home',
-    icon: require('../img/one.png'),
-    selectedIcon: require('../img/one_selected.png'),
-    title: 'Screen One',
+    icon: require('./assets/icons/home.png'),
+    selectedIcon: require('./assets/icons/home.png'),
+    title: 'Home',
   },
   {
-    label: 'Two',
-    screen: 'example.SecondTabScreen',
-    icon: require('../img/two.png'),
-    selectedIcon: require('../img/two_selected.png'),
-    title: 'Screen Two',
+    screen: 'tabs.Search',
+    icon: require('./assets/icons/search.png'),
+    selectedIcon: require('./assets/icons/search.png'),
+    title: 'Search',
   },
 ];

@@ -5,14 +5,14 @@ import { View, Text } from 'react-native';
 import { s } from 'src/styles';
 import { Page } from './page';
 
-export const Home = (props: HomeProps): Element<any> => (
+export const Search = (props: SearchProps): Element<any> => (
   <Page>
     <View style={[s.flx_i, s.jcc]}>
-      <Text>Welcome to home</Text>
+      <Text>Welcome to search</Text>
     </View>
   </Page>
 );
 
-declare type HomeProps = {
+declare type SearchProps = {
   navigator: Object,
 };
