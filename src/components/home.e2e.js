@@ -1,4 +1,4 @@
-// @flow
+/*eslint-disable */
 describe('Home suite', () => {
   beforeEach(async () => {
     await device.reloadReactNative();

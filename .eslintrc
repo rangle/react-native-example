@@ -134,6 +134,8 @@
   "globals": {
     "describe": true,
     "expect": true,
+    "device": true,
+    "element": true,
     "fetch": true,
     "jest": true,
     "it": true,
@@ -143,6 +145,7 @@
     "afterAll": true,
     "afterEach": true,
     "test": true,
+    "by": true,
     "jasmine": true
   }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1494336006680" clover="3.2.0">
-  <project timestamp="1494336006680" name="All files">
+<coverage generated="1496863054222" clover="3.2.0">
+  <project timestamp="1496863054223" name="All files">
     <metrics statements="22" coveredstatements="18" conditionals="7" coveredconditionals="4" methods="13" coveredmethods="4" elements="42" coveredelements="26" complexity="0" loc="22" ncloc="22" packages="3" files="4" classes="4">
       <package name="react-native-starter">
         <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>

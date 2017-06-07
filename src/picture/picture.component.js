@@ -3,7 +3,7 @@ import type { Element } from 'react';
 import React from 'react';
 import { CameraKitCamera } from 'react-native-camera-kit';
 
-export const Picture = (props: PictureProps): Element<any> => (
+export const Picture = (): Element<any> => (
   <CameraKitCamera
     testID="Camera"
     ref={(cam: Object) => {
@@ -17,7 +17,3 @@ export const Picture = (props: PictureProps): Element<any> => (
     }}
   />
 );
-
-declare type PictureProps = {
-  navigator: Object,
-};
