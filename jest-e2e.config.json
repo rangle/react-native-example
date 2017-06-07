@@ -1,7 +1,8 @@
 {
   "preset": "react-native",
-  "testPathIgnorePatterns": ["/node_modules/", "src"],
+  "testPathIgnorePatterns": ["/node_modules/"],
   "verbose": true,
+  "bail": false,
   "testMatch": ["**/?(*.)(e2e).js"],
-  "setupTestFrameworkScriptFile": "./e2e/e2e-setup.js"
+  "setupTestFrameworkScriptFile": "./e2e/init.js"
 }
