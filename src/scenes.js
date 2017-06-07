@@ -1,6 +1,7 @@
 // @flow
 
 import { Home, Search } from 'src/components';
+import { Picture } from 'src/picture';
 import type { Scene } from 'src/navigation';
 
 export const scenes: Array<Scene> = [
@@ -14,6 +15,11 @@ export const scenes: Array<Scene> = [
     Component: (): Element => Search,
     title: 'Search',
   },
+  {
+    screen: 'tabs.Picture',
+    Component: (): Element => Picture,
+    title: 'Picture',
+  },
 ];
 
 export const tabs = [
@@ -22,6 +28,15 @@ export const tabs = [
     icon: require('./assets/icons/home.png'),
     selectedIcon: require('./assets/icons/home.png'),
     title: 'Home',
+  },
+  {
+    screen: 'tabs.Picture',
+    icon: require('./assets/icons/add.png'),
+    selectedIcon: require('./assets/icons/add.png'),
+    title: 'Picture',
+    navigatorStyle: {
+      navBarHidden: true,
+    },
   },
   {
     screen: 'tabs.Search',

@@ -8,6 +8,7 @@ import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.reactnativenavigation.NavigationApplication;
+import com.wix.RNCameraKit.RNCameraKitPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +25,8 @@ public class MainApplication extends NavigationApplication {
     public List<ReactPackage> createAdditionalReactPackages() {
         return Arrays.<ReactPackage>asList(
                 new VectorIconsPackage(),
-                new ReactNativePushNotificationPackage()
+                new ReactNativePushNotificationPackage(),
+                new RNCameraKitPackage()
         );
     }
 
