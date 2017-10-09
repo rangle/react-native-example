@@ -1,5 +1,3 @@
 import { watchForAppStateChange } from './app-state';
 
-export default [
-  watchForAppStateChange,
-];
+export const coreSagas = [watchForAppStateChange];

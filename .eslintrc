@@ -4,9 +4,18 @@
   ],
   "parser": "babel-eslint",
   "plugins": [
-    "flowtype"
+    "flowtype",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "parser": "flow",
+      "trailingComma": "all",
+      "jsxBracketSameLine": false,
+      "printWidth": 100,
+    }],
+    "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false}],
     "react/prop-types": 0,
     "react/jsx-filename-extension": [
       2,
@@ -16,6 +25,8 @@
         ]
       }
     ],
+    "react/jsx-indent-props": "off",
+    "react/jsx-closing-bracket-location": "off",
     "react/forbid-prop-types": 0,
     "react/require-default-props": 0,
     "no-nested-ternary": 0,
@@ -84,12 +95,8 @@
       2,
       "boolean"
     ],
-    "flowtype/generic-spacing": [
-      2,
-      "never"
-    ],
     "flowtype/no-primitive-constructor-types": 2,
-    "flowtype/no-types-missing-file-annotation": 2,
+    "flowtype/no-types-missing-file-annotation": 0,
     "flowtype/no-weak-types": 0,
     "flowtype/object-type-delimiter": [
       2,
@@ -100,6 +107,7 @@
       2,
       "always",
       {
+        "excludeArrowFunctions": "expressionsOnly",
         "annotateUndefined": "never"
       }
     ],

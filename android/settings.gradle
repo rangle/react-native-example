@@ -1,4 +1,6 @@
 rootProject.name = 'ReactNativeStarter'
+include ':react-native-config'
+project(':react-native-config').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-config/android')
 include ':react-native-camera-kit'
 project(':react-native-camera-kit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera-kit/android')
 include ':react-native-navigation'

@@ -2,30 +2,15 @@
  * @providesModule styles
  */
 import NativeTachyons, { styles } from 'react-native-style-tachyons';
-import { StyleSheet, Platform } from 'react-native';
-import { palette, zIndexes, perecentWidths } from './config';
+import { StyleSheet } from 'react-native';
+import { config } from './config';
+import { extendedStyles } from './extends';
 
-const iosFontClasses = {
-
-};
-
-const androidFontClasses = {
-
-};
-
-NativeTachyons.build({
-  colors: { palette },
-  // fonts,
-}, StyleSheet);
+NativeTachyons.build(config, StyleSheet);
 
 export const s = {
   ...styles,
-  ...Platform.select({
-    ios: iosFontClasses,
-    android: androidFontClasses,
-  }),
-  ...zIndexes,
-  ...perecentWidths,
+  ...extendedStyles,
 };
 
 export * from './config';

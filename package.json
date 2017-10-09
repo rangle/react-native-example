@@ -3,16 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "fix-schemes": "react-native-schemes-manager all",
+    "postinstall": "npm run flow-typed && react-native-schemes-manager all",
     "devtools": "react-devtools",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone 7 Plus\"",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "build:ios": "node node_modules/react-native/local-cli/cli.js run-ios --configuration Release",
     "appium": "appium",
-    "test:unit": "jest --config jest-unit.config.json",
-    "test:e2e": "jest --config jest-e2e.config.json",
-    "test:e2e:sauce": "NODE_ENV=e2eSauce npm run test:e2e",
-    "test": "npm run lint && npm run test:unit -- --coverage",
+    "test:unit": "jest -c jest-unit.config.json",
+    "jest:showconfig": "jest --showConfig",
+    "e2e": "jest -c jest-e2e.config.json",
+    "e2e:ci": "NODE_ENV=e2eCi npm run e2e -- --forceExit",
+    "e2e:watch": "NODE_ENV=e2eWatch npm run e2e -- --watch",
+    "test": "npm run lint && npm run flow && npm run flow-stop && npm run test:unit -- --coverage --maxWorkers 2",
     "test:watch": "npm run lint && npm run test:unit -- --watch",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
@@ -25,21 +29,28 @@
     "tcp-reverse": "adb reverse tcp:8081 tcp:8081",
     "flow": "node_modules/.bin/flow",
     "flow-stop": "node_modules/.bin/flow stop",
-    "e2e": "jest -c jest-e2e.config.json"
+    "flow-typed": "./node_modules/.bin/flow-typed install",
+    "prettier-opts": "prettier --parser 'flow' --print-width 100 --trailing-comma all --single-quote --write",
+    "prettier": "yarn prettier-opts '\"src/**/*.js\"'",
+    "prepush": "npm test"
   },
   "dependencies": {
+    "date-fns": "^1.28.5",
+    "flow-typed": "^2.2.0",
     "ramda": "^0.23.0",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
     "react-native-camera-kit": "^5.2.13",
-    "react-native-navigation": "v2.0.0",
+    "react-native-config": "^0.8.1",
+    "react-native-navigation": "1.1.236",
     "react-native-push-notification": "^2.2.1",
     "react-native-style-tachyons": "^3.3.0",
     "react-native-vector-icons": "^4.0.1",
     "react-redux": "^5.0.3",
     "recompose": "^0.23.4",
     "redux": "^3.6.0",
-    "redux-logger": "^2.8.2",
+    "redux-form": "^7.1.0",
+    "redux-logger": "^3.0.6",
     "redux-persist": "^4.5.0",
     "redux-saga": "^0.15.3",
     "reselect": "^2.5.4"
@@ -62,11 +73,14 @@
     "eslint-plugin-flowtype-errors": "^3.0.3",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^6.10.0",
     "flow-bin": "^0.45.0",
     "jest": "19.0.2",
     "mocha": "^3.4.2",
+    "prettier": "^1.7.4",
     "react-devtools": "^2.0.12",
+    "react-native-schemes-manager": "^1.0.0",
     "react-test-renderer": "16.0.0-alpha.6"
   },
   "detox": {
@@ -91,7 +105,14 @@
   },
   "rnpm": {
     "assets": [
-      "assets/fonts"
+      "fonts"
     ]
+  },
+  "xcodeSchemes": {
+    "Debug": [],
+    "Release": [
+      "Staging"
+    ],
+    "projectDirectory": "iOS"
   }
 }

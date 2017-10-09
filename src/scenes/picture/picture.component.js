@@ -1,9 +1,7 @@
-// @flow
-import type { Element } from 'react';
 import React from 'react';
 import { CameraKitCamera } from 'react-native-camera-kit';
 
-export const Picture = (): Element<any> => (
+export const Picture = () => (
   <CameraKitCamera
     testID="Camera"
     ref={(cam: Object) => {

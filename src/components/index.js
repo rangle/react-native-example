@@ -1,2 +1,2 @@
-export * from './home';
-export * from './search';
+export * from './block';
+export * from './typography';

@@ -1,5 +1,5 @@
 import { appStateReducer } from './app-state';
 
-export default {
+export const coreReducers = {
   appActive: appStateReducer,
 };
