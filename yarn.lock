@@ -5669,9 +5669,10 @@ react-devtools@^2.0.12:
     ip "^1.1.4"
     react-devtools-core "^2.1.7"
 
-react-native-camera-kit@^5.2.13:
-  version "5.2.13"
-  resolved "https://registry.yarnpkg.com/react-native-camera-kit/-/react-native-camera-kit-5.2.13.tgz#b513003d5027d103ce16bc6c471f02dec1ca2adb"
+react-native-camera-kit@^5.3.32:
+  version "5.3.32"
+  resolved "https://registry.yarnpkg.com/react-native-camera-kit/-/react-native-camera-kit-5.3.32.tgz#2d6a9b5605f594b41d5d1d7b695b68f10444fe0a"
+  integrity sha512-Wng+cTjA8IH+vTZTWnA2aqPnJsw6krO+tszd2QumF6mOhNGSzhOxTQyDHwGJCZdWj8Y3KKCtgdo6fwdWW6PLtw==
   dependencies:
     lodash "^4.14.2"
 

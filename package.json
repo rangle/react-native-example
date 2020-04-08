@@ -40,7 +40,7 @@
     "ramda": "^0.23.0",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
-    "react-native-camera-kit": "^5.2.13",
+    "react-native-camera-kit": "^5.3.32",
     "react-native-config": "^0.8.1",
     "react-native-navigation": "1.1.236",
     "react-native-push-notification": "^2.2.1",
