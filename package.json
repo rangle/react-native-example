@@ -32,7 +32,9 @@
     "flow-typed": "./node_modules/.bin/flow-typed install",
     "prettier-opts": "prettier --parser 'flow' --print-width 100 --trailing-comma all --single-quote --write",
     "prettier": "yarn prettier-opts '\"src/**/*.js\"'",
-    "prepush": "npm test"
+    "prepush": "npm test",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "dependencies": {
     "date-fns": "^1.28.5",
@@ -53,7 +55,8 @@
     "redux-logger": "^3.0.6",
     "redux-persist": "^4.5.0",
     "redux-saga": "^0.15.3",
-    "reselect": "^2.5.4"
+    "reselect": "^2.5.4",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "appium": "^1.6.3",
@@ -114,5 +117,6 @@
       "Staging"
     ],
     "projectDirectory": "iOS"
-  }
+  },
+  "snyk": true
 }
